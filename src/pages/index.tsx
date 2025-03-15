@@ -1,9 +1,6 @@
 import { ChevronDoubleUpIcon } from '@heroicons/react/24/outline'
-import type { NextPage } from 'next'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import Link from 'next/link'
-import { useEffect } from 'react'
 import { PageInfo, Project, Skill, Social, Experience } from '../../typings'
 import About from '../components/About'
 import Contact from '../components/Contact'
@@ -64,7 +61,7 @@ const Home = ({ pageInfo, experiences, socials, skills, projects }: Props) => {
 
             {/* contact me */}
             <section id="contact">
-                <Contact />
+                <Contact pageInfo={pageInfo} />
             </section>
 
             <a href="#hero">
@@ -98,12 +95,4 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
         revalidate: 10,
     }
 }
-
-
-
-
-
-
-
-
 

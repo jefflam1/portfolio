@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
 import { urlFor } from '../../sanity'
@@ -49,13 +50,4 @@ const Hero = ({ pageInfo }: Props) => {
 }
 
 export default Hero
-
-
-
-
-
-
-
-
-
 
