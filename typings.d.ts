@@ -44,7 +44,7 @@ export interface Technology extends SanityBody {
     title: string
 }
 
-export interface Skill extends SanityBody {
+export interface SkillTypes extends SanityBody {
     _type: 'skill'
     image: Image
     progress: number
@@ -65,6 +65,4 @@ export interface Social extends SanityBody {
     title: string
     url: string
 }
-
-
 

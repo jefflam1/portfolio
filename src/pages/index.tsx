@@ -1,7 +1,7 @@
 import { ChevronDoubleUpIcon } from '@heroicons/react/24/outline'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import { PageInfo, Project, Skill, Social, Experience } from '../../typings'
+import { PageInfo, Project, SkillTypes, Social, Experience } from '../../typings'
 import About from '../components/About'
 import Contact from '../components/Contact'
 import WorkExperience from '../components/Experience'
@@ -18,7 +18,7 @@ import { fetchSocial } from '../utils/fetchSocial'
 type Props = {
     pageInfo: PageInfo
     experiences: Experience[]
-    skills: Skill[]
+    skills: SkillTypes[]
     projects: Project[]
     socials: Social[]
 }
@@ -80,7 +80,7 @@ export default Home
 export const getStaticProps: GetStaticProps<Props> = async () => {
     const pageInfo: PageInfo = await fetchPageInfo()
     const experiences: Experience[] = await fetchExperiences()
-    const skills: Skill[] = await fetchSkills()
+    const skills: SkillTypes[] = await fetchSkills()
     const projects: Project[] = await fetchProjects()
     const socials: Social[] = await fetchSocial()
 

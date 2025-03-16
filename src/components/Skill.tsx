@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
 import { urlFor } from '../../sanity'
-import { Skill } from '../../typings'
+import { SkillTypes } from '../../typings'
 
 type IconProps = {
-    skill: Skill
+    skill: SkillTypes
     directionLeft?: boolean
 }
 
@@ -33,43 +33,4 @@ const Skill = ({ directionLeft, skill }: IconProps) => {
 }
 
 export default Skill
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
