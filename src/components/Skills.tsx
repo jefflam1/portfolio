@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
 import Skill from './Skill'
-import { Skill as SkillType } from '../../typings'
+import { SkillTypes } from '../../typings'
 
 type Props = {
-    skills: SkillType[]
+    skills: SkillTypes[]
 }
 
 const Skills = ({ skills }: Props) => {
@@ -31,25 +31,4 @@ const Skills = ({ skills }: Props) => {
 }
 
 export default Skills
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
