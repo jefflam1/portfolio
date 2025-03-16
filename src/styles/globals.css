@@ -1,17 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@layer components {
-    .heroButton {
-        @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-sm tracking-widest text-gray-500 transition-all 
-        hover:border-[#06d6a0]/40 hover:text-[#06d6a0]/40
-    }
+@plugin 'tailwind-scrollbar' {
+  nocompatible: true;
+  preferredStrategy: 'pseudoelements';
+};
 
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
 
-    .contactInput {
-        @apply w-full outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@utility heroButton {
+  @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-sm tracking-widest text-gray-500 transition-all 
+        hover:border-[#06d6a0]/40 hover:text-[#06d6a0]/40;
+}
+
+@utility contactInput {
+  @apply w-full outline-hidden bg-slate-400/10 rounded-xs border-b px-6 py-4 border-[#242424] text-gray-500 
         placeholder-gray-500 transition-all focus:border-[#06d6a0]/40 
-        focus:text-[#06d6a0]/40 hover:border-[#06d6a0]/40
-    }
+        focus:text-[#06d6a0]/40 hover:border-[#06d6a0]/40;
 }

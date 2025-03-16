@@ -8,7 +8,7 @@ type Props = {
 }
 
 const Projects = ({ projects }: Props) => {
-    console.log(projects)
+    console.log(123, projects)
     return (
         <motion.div
             initial={{
@@ -27,7 +27,7 @@ const Projects = ({ projects }: Props) => {
             z-20 scrollbar-thin scroll-track-gray-400/20 scrollbar-thumb-[#048a81] cursor-pointer">
                 {projects.map((project, id) => (
                     <a href={project.linkToBuild} target="_blank" key={project._id} rel="noreferrer">
-                        <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center px-16 pt-48 pb-20 md:p-44 h-screen">
+                        <div className="w-screen shrink-0 snap-center flex flex-col space-y-5 items-center px-16 pt-48 pb-20 md:p-44 h-screen">
                             <motion.img
                                 initial={{
                                     opacity: 0,
@@ -51,7 +51,7 @@ const Projects = ({ projects }: Props) => {
                                     </span>
                                     {project.title}
                                 </h4>
-                                <div className="flex items-center space-x-2 justify-center">
+                                <div className="flex items-center gap-2 justify-center">
                                     {project.technologies?.map(
                                         (tech) =>
                                             tech.image && (
@@ -78,101 +78,4 @@ const Projects = ({ projects }: Props) => {
 }
 
 export default Projects
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
