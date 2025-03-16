@@ -1,6 +1,6 @@
 import { groq } from 'next-sanity'
 import { sanityClient } from '../../sanity'
-import { Skill } from '../../typings'
+import { SkillTypes } from '../../typings'
 
 const query = groq`
     *[_type=='skill']
@@ -9,7 +9,7 @@ const query = groq`
 export const fetchSkills = async () => {
     const res = await sanityClient.fetch(query)
 
-    const skills: Skill[] = res
+    const skills: SkillTypes[] = res
 
     return skills
 }
